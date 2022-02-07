@@ -1,28 +1,25 @@
 import React from "react";
-import EditorTabs from "./components/EditorTabs";
-import Grid from "@mui/material/Grid";
-import CatMeme from "./components/CatMeme";
+import Canvas from "./components/Canvas";
 
 export default function index() {
   return (
-    <div>
-      <Grid container spacing={2}>
-        <Grid item xs={12}>
-          <div>Header Area</div>
-        </Grid>
-        <Grid item xs={12}>
-          <CatMeme />
-        </Grid>
+    <div className="App">
+      <header className="App-header">
+        <nav className="topnav">
+          <ul>
+            <li>
+              <a href="https://silvia-odwyer.github.io/photon/docs/photon/index.html">
+                Docs
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/silvia-odwyer/photon">GitHub</a>
+            </li>
+          </ul>
+        </nav>
 
-        <Grid item xs={12}>
-          <EditorTabs />
-        </Grid>
-      </Grid>
-
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-      />
+        <Canvas />
+      </header>
     </div>
   );
 }
